@@ -59,13 +59,10 @@ export default class Users extends Component {
 
         const tableData = currentTasks.map(function(task,key) {
             return <tr key={key}>
-                <td>{task.id}</td>
                 <td>{task.name}</td>
                 <td>{task.description}</td>
                 <td>{task.status}</td>
                 <td>{task.assign}</td>
-                <td>{task.created_at}</td>
-                <td>{task.updated_at}</td>
             </tr>
         });
 
@@ -74,16 +71,13 @@ export default class Users extends Component {
             <Fragment>
                 <h1>Task list</h1>
                 <hr/>
-                <table className="table table-bordered">
+                <table className="table table-bordered table-hover">
                     <thead>
                     <tr>
-                        <th>Id</th>
                         <th>Name</th>
                         <th>Description</th>
                         <th>Status</th>
                         <th>Assigned to</th>
-                        <th>Created</th>
-                        <th>Updated</th>
                     </tr>
                     </thead>
                     <tbody>
